@@ -2,7 +2,7 @@
                 <span class="file-input__file-name">${r.name}</span>
                 <span class="file-input__delete-file">
                     <svg class="file-input__delete-icon">
-                        <use xlink:href="/test_order-page/assets/spritemap.svg.svg#sprite-delete"></use>
+                        <use xlink:href="/test_order-page/assets/spritemap.svg#sprite-delete"></use>
                     </svg>
                 </span>
             `,l.append(s)}),e.classList.add("uploaded")):e.classList.remove("uploaded")}document.addEventListener("change",function(e){if(e.target&&e.target.classList.contains("file-input__input")){let t=e.target.closest(".file-input"),l=Array.from(e.target.files);c(t,l)}});document.addEventListener("click",function(e){if(e.target&&e.target.closest(".file-input__delete-file")){e.preventDefault();let t=e.target.closest(".file-input"),l=t.querySelector(".file-input__input"),r=t.querySelector(".file-input__file-list");r.innerHTML="",l.value="",t.classList.remove("uploaded")}});
