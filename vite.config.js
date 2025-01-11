@@ -16,7 +16,7 @@ export default ({ mode }) => {
           route: 'assets/spritemap',
           output: {
             name: 'spritemap.svg',
-            filename: '[name].[extname]'
+            filename: '[name][extname]'
           },
         }),
         vituum({
