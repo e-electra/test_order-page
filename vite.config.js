@@ -14,6 +14,10 @@ export default ({ mode }) => {
       plugins: [
         VitePluginSvgSpritemap('./src/assets/img/icons/*.svg', {
           route: 'assets/__spritemap',
+          output: {
+            filename: '[name].[hash][extname]',
+            name: 'spritemap.svg',
+          },
         }),
         vituum({
             normalizeBasePath: true
