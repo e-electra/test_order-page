@@ -63,8 +63,12 @@
     color: var(--color-special-black);
   }
 
-  &__delete-icon {
+  &__delete-file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 20px;
     height: 20px;
+    background-image: url(assets/icons/delete.svg);
   }
 }

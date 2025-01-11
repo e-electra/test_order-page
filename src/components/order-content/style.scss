@@ -24,11 +24,10 @@
   &__header {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: var(--size-16);
 
     @include media-breakpoint-up(md) {
-      align-items: center;
       gap: var(--size-30);
     }
   }

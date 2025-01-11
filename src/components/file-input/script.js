@@ -8,11 +8,7 @@ function addFiles(parent, fileArr) {
             fileItem.classList.add('file-input__file')
             fileItem.innerHTML = `
                 <span class="file-input__file-name">${file.name}</span>
-                <span class="file-input__delete-file">
-                    <svg class="file-input__delete-icon">
-                        <use xlink:href="/src/assets/icons/delete.svg#delete"></use>
-                    </svg>
-                </span>
+                <span class="file-input__delete-file"></span>
             `
             fileList.append(fileItem)
         });
