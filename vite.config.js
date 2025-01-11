@@ -12,7 +12,9 @@ export default ({ mode }) => {
   return {
       base: mode === 'development' ? '/' : '/test_order-page/',
       plugins: [
-        VitePluginSvgSpritemap('./src/assets/img/icons/*.svg'),
+        VitePluginSvgSpritemap('./src/assets/img/icons/*.svg', {
+          route: 'assets/__spritemap',
+        }),
         vituum({
             normalizeBasePath: true
         }),
@@ -52,7 +54,7 @@ export default ({ mode }) => {
         assetsInlineLimit: 0,
         rollupOptions: {
           output: {
-            dir: 'dist/test_order-page',
+            dir: 'dist/',
             chunkFileNames: 'assets/js/[name].js',
             entryFileNames: 'assets/js/[name].js',
             assetFileNames: ({ name }) => {
