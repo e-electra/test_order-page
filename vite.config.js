@@ -1,4 +1,3 @@
-import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap'
 import vituum from 'vituum';
 import posthtml from '@vituum/vite-plugin-posthtml';
 import posthtml_extend from 'posthtml-extend';
@@ -10,15 +9,8 @@ import localsConfig from "./localsConfig.js";
 export default ({ mode }) => {
   const locals = localsConfig(mode);
   return {
-      base: '/',
+      base: mode === 'development' ? '/' : '/test_order-page/',
       plugins: [
-        VitePluginSvgSpritemap('./src/assets/img/icons/*.svg', {
-          route: 'assets/spritemap',
-          output: {
-            name: 'spritemap.svg',
-            filename: '[name][extname]'
-          },
-        }),
         vituum({
             normalizeBasePath: true
         }),

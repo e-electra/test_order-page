@@ -10,7 +10,7 @@ function addFiles(parent, fileArr) {
                 <span class="file-input__file-name">${file.name}</span>
                 <span class="file-input__delete-file">
                     <svg class="file-input__delete-icon">
-                        <use xlink:href="/assets/spritemap#sprite-delete"></use>
+                        <use xlink:href="/src/assets/icons/delete.svg#delete"></use>
                     </svg>
                 </span>
             `
