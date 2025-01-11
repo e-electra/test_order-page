@@ -13,10 +13,10 @@ export default ({ mode }) => {
       base: mode === 'development' ? '/' : '/test_order-page/',
       plugins: [
         VitePluginSvgSpritemap('./src/assets/img/icons/*.svg', {
-          route: 'assets/__spritemap',
+          route: 'assets/spritemap',
           output: {
-            filename: '[name].[hash][extname]',
             name: 'spritemap.svg',
+            filename: '[name].[extname]'
           },
         }),
         vituum({
