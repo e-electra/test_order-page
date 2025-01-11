@@ -1,0 +1,46 @@
+@use '../../assets/scss/abstract/mixins' as *;
+
+.privileges {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-10);
+
+  &__title {
+    font-size: var(--size-20);
+    line-height: var(--size-24);
+    font-weight: 700;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__item {
+    font-size: var(--size-14);
+    line-height: var(--size-20);
+    font-weight: 400;
+    padding-left: 25px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 10px;
+      left: 10px;
+      width: 5px;
+      height: 1.5px;
+      background-color: var(--color-standart-black);
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: var(--size-20);
+      line-height: var(--size-24);
+
+      &:before {
+        top: 12px;
+      }
+    }
+  }
+}

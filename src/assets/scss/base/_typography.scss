@@ -1,0 +1,59 @@
+@use '../../scss/abstract/_mixins' as *;
+
+@for $i from 1 through 6 {
+  h#{$i},
+  .h#{$i} {
+    font-weight: bold;
+    letter-spacing: inherit;
+    word-break: break-word;
+  }
+}
+
+h1,
+.h1 {
+  font-size: var(--size-32);
+  line-height: var(--size-40);
+
+  @include media-breakpoint-down(md) {
+    font-size: var(--size-24);
+    line-height: var(--size-32);
+  }
+}
+
+h2,
+.h2 {
+  font-size: var(--size-24);
+  line-height: var(--size-32);
+
+  @include media-breakpoint-down(md) {
+    font-size: var(--size-20);
+    line-height:  var(--size-28);
+  }
+}
+
+h3,
+.h3 {
+  font-size: var(--size-20);
+  line-height: var(--size-28);
+}
+//
+//h4,
+//.h4 {
+//  font-size: var(--gw-custom-rem-size-18);
+//  line-height: var(--gw-custom-rem-size-24);
+//  margin-bottom: var(--gw-spacer-16);
+//}
+//
+//h5,
+//.h5 {
+//  font-size: var(--gw-custom-rem-size-16);
+//  line-height: var(--gw-custom-rem-size-24);
+//  margin-bottom: var(--gw-spacer-16);
+//}
+//
+//h6,
+//.h6 {
+//  font-size: var(--gw-custom-rem-size-14);
+//  line-height: var(--gw-custom-rem-size-22);
+//  margin-bottom: var(--gw-spacer-16);
+//}

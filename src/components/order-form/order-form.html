@@ -1,0 +1,64 @@
+<form class="{{class}} order-form" id="order-form" action="/apply/" method="POST">
+    <div class="order-form__fields">
+        <include
+        src="components/select/select.html"
+        locals='{
+            "class": "order-form__select-system order-form__validation-field",
+            "required": "true",
+            "input_name": "systemtype",
+            "placeholder": "Выберите тип системы",
+            "options": [
+                "Sed ut perspiciatis",
+                "Nemo enim ipsam",
+                "Et harum quidem",
+                "Temporibus autem",
+                "Itaque earum rerum"
+            ]
+        }'
+        >
+        </include>
+        <include
+            src="components/input/input.html"
+            locals='{
+                "class": "order-form__email-input order-form__validation-field",
+                "required": "true",
+                "input_type": "email",
+                "input_name": "email",
+                "placeholder": "Ваш e-mail",
+                "maxlength": 50
+            }'
+        ></include>
+        <include
+            src="components/input/input.html"
+            locals='{
+                "class": "order-form__name-input order-form__validation-field",
+                "required": "true",
+                "input_type": "text",
+                "input_name": "name",
+                "placeholder": "Ваше имя",
+                "maxlength": 50
+            }'
+        ></include>
+        <include
+            src="components/range-bar/range-bar.html"
+            locals='{
+                "class": "order-form__range-bar",
+                "label": "Sed ut perspiciatis, unde omnis iste natus",
+                "input_name": "percent",
+                "required": "false",
+                "postfix": "%",
+                "min_value": 0,
+                "max_value": 100
+            }'
+        >
+        </include>
+        <include
+            src="components/file-input/file-input.html"
+            locals='{
+                "class": "order-form__file-input",
+                "input_name": "file"
+            }'
+        ></include>
+    </div>
+    <button class="button button--theme-primary order-form__submit" type="submit" >Отправить</button>
+</form>

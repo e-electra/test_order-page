@@ -1,0 +1,61 @@
+@use '../../scss/abstract/_mixins' as *;
+@use '../../scss/abstract/_variables' as *;
+
+.button {
+  width: auto;
+  padding: 14px 10px;
+  text-transform: uppercase;
+  border-radius: var(--size-4);
+  border: 1px solid var(--color-special-gray);
+  transition: $transition-basic;
+  font-size: var(--size-13);
+  line-height: var(--size-16);
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &--theme-primary {
+    background-color: var(--color-light-blue);
+    color: var(--color-standart-white);
+    border: 1px solid var(--color-standart-white);
+
+    &:hover {
+      transition: $transition-basic;
+      color: var(--color-standart-white);
+      opacity: 0.8;
+    }
+
+    &:focus {
+      color: var(--color-standart-white);
+      transition: $transition-basic;
+    }
+
+    &:focus-within {
+      color: var(--color-standart-white);
+      transition: $transition-basic;
+    }
+  }
+
+  &--theme-outline {
+    background-color: var(--color-standart-white);
+    color: var(--color-standart-gray);
+
+    &:hover {
+      color: var(--color-standart-gray);
+      transition: $transition-basic;
+      opacity: 0.85;
+    }
+
+    &:focus {
+      color: var(--color-standart-gray);
+      transition: $transition-basic;
+      border-color: var(--color-special-black);
+    }
+
+    &:focus-within {
+      color: var(--color-standart-gray);
+      transition: $transition-basic;
+      border-color: var(--color-special-black);
+    }
+  }
+}

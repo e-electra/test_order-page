@@ -1,0 +1,38 @@
+.input {
+  position: relative;
+
+  &.error {
+    & .input__input {
+      border-color: var(--color-error-red);
+    }
+
+    & .input__error {
+      display: block;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 3px;
+    border: 1px solid var(--color-standart-white);
+    font-size: var(--size-18);
+    line-height: var(--size-22);
+    font-weight: 400;
+    color: var(--color-special-black);
+
+    &:focus {
+      border: 1px solid var(--color-light-blue);
+    }
+  }
+
+  &__error {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    color: var(--color-error-red);
+  }
+}

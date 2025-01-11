@@ -1,0 +1,20 @@
+$font-path: "/src/assets/scss/fonts";
+
+@font-face {
+  font-family: 'Lato';
+  src: url('#{$font-path}/Lato.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('#{$font-path}/Raleway.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+

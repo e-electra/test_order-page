@@ -1,0 +1,20 @@
+//partial components
+@forward "header/style";
+@forward "footer/style";
+
+//shared components
+@forward "payments/style";
+@forward "contacts/style";
+
+@forward "navigation/style";
+@forward "promo/style";
+@forward "privileges/style";
+@forward "order-content/style";
+@forward "ordering-steps/style";
+@forward "order-form/style";
+
+//form components
+@forward "range-bar/style";
+@forward "select/style";
+@forward "input/style";
+@forward "file-input/style";

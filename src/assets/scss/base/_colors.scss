@@ -1,0 +1,21 @@
+$colors-palette: (
+  standart-white: #ffffff,
+  special-white: #c3c3c3,
+  special-black: #272733,
+  standart-black: #000000,
+  light-black: #3d4050,
+  standart-gray: #6f6d7b,
+  special-gray: #bbbbbb,
+  standart-blue: #3e9cdc,
+  special-blue: #286690,
+  light-blue: #3e9cdc,
+  range-blue: #42a9ed,
+  error-red: red,
+);
+
+
+:root {
+  @each $name, $value in $colors-palette {
+    --color-#{$name}: #{$value};
+  }
+}

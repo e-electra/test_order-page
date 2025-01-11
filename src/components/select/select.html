@@ -1,0 +1,15 @@
+<div class="{{class}} select">
+    <label class="select__label">
+        <input value="" class="select__input" type="text" name="{{input_name}}" placeholder="{{placeholder}}" readonly="readonly" required="{{required}}">
+        <svg class="select__label-icon">
+            <use xlink:href="/__spritemap#sprite-icon-arrow"></use>
+        </svg>
+    </label>
+    <ul class="select__options-list">
+        <each loop="option in {{options}}">
+            <li class="select__option-item">
+                <span class="select__option-label">{{option}}</span>
+            </li>
+        </each>
+    </ul>
+</div>

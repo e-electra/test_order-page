@@ -1,0 +1,53 @@
+@use '../../assets/scss/abstract/mixins' as *;
+
+.payments {
+  border-top: 1px solid var(--color-special-white);
+  border-bottom: 1px solid var(--color-special-white);
+  padding: 42px 0;
+
+  @include media-breakpoint-up(md) {
+    padding: 0 42px;
+    border-top:0;
+    border-bottom: 0;
+    border-left: 1px solid var(--color-special-white);
+    border-right: 1px solid var(--color-special-white);
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-width: 250px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--size-30);
+
+    @include media-breakpoint-up(lg) {
+      justify-content: space-between;
+      gap: var(--size-38);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--size-10);
+    color: var(--color-special-white);
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    color: var(--color-standart-blue);
+    width: 20px;
+    height: 20px;
+  }
+}

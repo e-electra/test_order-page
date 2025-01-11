@@ -1,0 +1,57 @@
+@use '../../scss/abstract/_mixins' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato", sans-serif;
+  font-size: var(--size-16);
+  line-height: var(--size-20);
+  font-weight: 400;
+  min-height: 100vh;
+  color: var(--color-standart-black);
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin: 0 16px;
+
+  @include media-breakpoint-up(md) {
+    margin: 0 64px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--color-standart-white);
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: var(--color-light-blue);
+  }
+}
+
+.colored-text {
+  color: var(--color-range-blue);
+}

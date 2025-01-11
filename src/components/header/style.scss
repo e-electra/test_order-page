@@ -1,0 +1,41 @@
+@use '../../assets/scss/abstract/mixins' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(16, 16, 29, 0.9);
+  z-index: 10;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 50px;
+    gap: var(--size-16);
+    padding: 16px 0;
+
+    @include media-breakpoint-up(md) {
+      min-height: 100px;
+    }
+  }
+
+  &__logo {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: var(--size-20);
+    line-height: var(--size-28);
+    font-weight: 800;
+    color: var(--color-standart-white);
+
+    @include media-breakpoint-up(md) {
+      font-size: var(--size-28);
+      line-height: var(--size-36);
+    }
+  }
+}

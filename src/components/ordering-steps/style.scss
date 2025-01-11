@@ -1,0 +1,73 @@
+@use '../../assets/scss/abstract/mixins' as *;
+
+.ordering-steps {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--size-50);
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--size-30);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--size-20);
+    max-width: 210px;
+    width: -webkit-fill-available;
+
+    @include media-breakpoint-up(lg) {
+      position: relative;
+
+      &:not(:last-child):not(:nth-child(5n)):before {
+        content: "";
+        height: 6px;
+        width: 100%;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        transform: translateX(54%);
+        background-position: center;
+        background-repeat: repeat-x;
+        background-size: contain;
+        background-image: url(assets/img/icons/steps-dots.svg);
+      }
+    }
+  }
+
+  &__description {
+    text-align: center;
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-standart-blue);
+    border-radius: 50%;
+    border: 5px solid var(--color-special-blue);
+    position: relative;
+    z-index: 2;
+  }
+
+  &__icon {
+    width: 55px;
+    height: 55px;
+  }
+}

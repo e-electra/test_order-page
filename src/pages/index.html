@@ -1,0 +1,46 @@
+<extends
+    src="layouts/main.html"
+    locals='{
+        "meta": {
+            "title": "LoremIpsum.net"
+        },
+        "data": {
+            "title": "LoremIpsum.net"
+        },
+        "pages_root_path": "{{ pages_root_path }}",
+        "assets_root_path": "{{ assets_root_path }}"
+    }'
+>
+    <block name="header">
+        <include
+            src="components/header/header.html"
+            locals='{
+
+            }'
+        ></include>
+    </block>
+    <block name="main">
+        <main class="main">
+            <include
+                src="components/promo/promo.html"
+                locals='{
+                    "class": "main__promo"
+                }'
+            ></include>
+            <include
+                src="components/order-content/order-content.html"
+                locals='{
+                    "class": "main__order-section"
+                }'
+            ></include>
+        </main>
+    </block>
+    <block name="footer">
+        <include
+            src="components/footer/footer.html"
+            locals='{
+
+            }'
+        ></include>
+    </block>
+</extends>

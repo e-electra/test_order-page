@@ -1,0 +1,28 @@
+@use '../../assets/scss/abstract/mixins' as *;
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-30);
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--size-54);
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--size-10);
+  }
+
+  &__icon {
+    color: var(--color-standart-blue);
+    width: 20px;
+    height: 20px;
+  }
+}

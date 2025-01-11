@@ -1,0 +1,60 @@
+@use '../../assets/scss/abstract/mixins' as *;
+
+.promo {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(assets/img/promo-bg.jpg);
+  color: var(--color-standart-black);
+
+  &__wrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: var(--size-24);
+    padding: 80px 0;
+
+    @include media-breakpoint-up(md) {
+      padding: 201px 0;
+      gap: 80px;
+    }
+  }
+
+  &__header {
+    font-size: var(--size-24);
+    line-height: var(--size-30);
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 700px;
+
+    @include media-breakpoint-up(md) {
+      font-size: var(--size-48);
+      line-height: var(--size-58);
+      max-width: 780px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-30);
+
+    @include media-breakpoint-up(md){
+      flex-direction: row;
+    }
+  }
+
+  &__button {
+    width: auto;
+    max-width: 183px;
+
+    @include media-breakpoint-up(md) {
+      width: 183px;
+      min-width: 183px;
+    }
+  }
+
+  &__content {
+    margin-top: 9px;
+  }
+}

@@ -1,0 +1,107 @@
+@use '../../assets/scss/abstract/mixins' as *;
+@use '../../assets/scss/abstract/_variables' as *;
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-20);
+
+  &__burger-button {
+    align-self: flex-end;
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    &.active {
+      & .navigation__icon--close {
+        display: block;
+      }
+
+      & .navigation__icon--open {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    display: none;
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+      gap: var(--size-20);
+      background-color: rgba(16, 16, 29, 0.95);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 16px;
+
+      @include media-breakpoint-up(md) {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        overflow: hidden;
+        row-gap: var(--size-20);
+        column-gap: var(--size-60);
+        background-color: inherit;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      overflow: hidden;
+      row-gap: var(--size-20);
+      column-gap: var(--size-60);
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: right;
+    transition: $transition-basic;
+    width: 100%;
+    font-size: var(--size-13);
+    line-height: var(--size-16);
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      transition: $transition-basic;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: auto;
+      font-weight: 600;
+    }
+
+    &.active {
+      color: var(--color-light-blue);
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    color: var(--color-standart-white);
+
+    &--close {
+      display: none;
+    }
+
+    &--open {
+      display: block;
+    }
+  }
+}

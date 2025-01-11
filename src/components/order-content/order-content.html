@@ -1,0 +1,22 @@
+<section class="{{class}} order-content">
+    <div class="container">
+        <div class="order-content__wrapper">
+            <div class="order-content__header">
+                <h2 class="order-content__title">Оформление <span class="colored-text">Заказа</span></h2>
+                <p class="order-content__sub-title">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+            </div>
+            <include
+                src="components/ordering-steps/ordering-steps.html"
+                locals='{
+                    "class": "order-content__steps"
+                }'
+            ></include>
+            <include
+                src="components/order-form/order-form.html"
+                locals='{
+                    "class": "order-content__form"
+                }'
+            ></include>
+        </div>
+    </div>
+</section>

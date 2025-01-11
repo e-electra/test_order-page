@@ -1,0 +1,70 @@
+.file-input {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  border: 2px solid var(--color-standart-blue);
+  background-color: var(--color-standart-white);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &.uploaded {
+    & .file-input__label {
+      display: none;
+    }
+
+    & .file-input__file-list {
+      display: block;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &__label {
+    display: inline;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--size-15);
+    line-height: var(--size-18);
+    font-weight: 600;
+    color: var(--color-special-black);
+    padding: 10px 10px 10px 28px;
+    position: relative;
+  }
+
+  &__label-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__file-list {
+    width: 100%;
+    display: none;
+    padding: 12px 10px;
+  }
+
+  &__file {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__file {
+    color: var(--color-special-black);
+  }
+
+  &__delete-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
