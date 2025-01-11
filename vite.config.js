@@ -10,7 +10,7 @@ import localsConfig from "./localsConfig.js";
 export default ({ mode }) => {
   const locals = localsConfig(mode);
   return {
-      base: mode === 'development' ? '/' : '/base/',
+      base: mode === 'development' ? '/' : '/test_order-page/',
       plugins: [
         VitePluginSvgSpritemap('./src/assets/img/icons/*.svg'),
         vituum({
@@ -52,7 +52,7 @@ export default ({ mode }) => {
         assetsInlineLimit: 0,
         rollupOptions: {
           output: {
-            dir: 'dist/base',
+            dir: 'dist/test_order-page',
             chunkFileNames: 'assets/js/[name].js',
             entryFileNames: 'assets/js/[name].js',
             assetFileNames: ({ name }) => {
