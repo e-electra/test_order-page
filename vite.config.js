@@ -10,7 +10,7 @@ import localsConfig from "./localsConfig.js";
 export default ({ mode }) => {
   const locals = localsConfig(mode);
   return {
-      base: mode === 'development' ? '/' : '/test_order-page/',
+      base: '/',
       plugins: [
         VitePluginSvgSpritemap('./src/assets/img/icons/*.svg', {
           route: 'assets/spritemap',
