@@ -6,7 +6,7 @@
       <script type="module" crossorigin src="/test_order-page/assets/js/index.js"></script>
       <link rel="stylesheet" crossorigin href="/test_order-page/assets/css/index.css">
     </head>
-    <body ontouchstart="" class="body">
+    <body class="body">
         
         <header class="header">
     <div class="container">
@@ -61,8 +61,8 @@
     </ul>
 </div>
             <div class="promo__buttons">
-                <a href="#" class="promo__button button button--theme-primary">Заказать</a>
-                <a href="#" class="promo__button button button--theme-outline">Подробнее</a>
+                <a href="#" class="promo__button button button--theme-primary" title="Заказать"><span class="promo__link-text">Заказать</span></a>
+                <a href="#" class="promo__button button button--theme-outline" title="Подробнее"><span class="promo__link-text">Подробнее</span></a>
             </div>
         </div>
     </div>
@@ -164,7 +164,7 @@
             <span class="range-bar__value-data">0</span> %
         </p>
     </div>
-    <input class="range-bar__input" type="range" name="percent" min="0" max="100" value="75" required="false">
+    <input class="range-bar__input" type="range" name="percent" min="0" max="100" value="75">
 </div>
         <label class="order-form__file-input file-input">
     <input class="file-input__input" type="file" name="file">
@@ -174,8 +174,7 @@
         </svg>
         <span>Прикрепить файл</span>
     </span>
-    <div class="file-input__file-list">
-    </div>
+    <div class="file-input__file-list"></div>
 </label>
     </div>
     <button class="button button--theme-primary order-form__submit" type="submit">Отправить</button>
