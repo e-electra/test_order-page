@@ -9,6 +9,7 @@
     font-size: var(--size-20);
     line-height: var(--size-24);
     font-weight: 700;
+    word-break: break-word;
   }
 
   &__list {
@@ -23,6 +24,7 @@
     font-weight: 400;
     padding-left: 25px;
     position: relative;
+    word-break: break-word;
 
     &:before {
       position: absolute;

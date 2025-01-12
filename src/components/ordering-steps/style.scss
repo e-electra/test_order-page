@@ -50,6 +50,13 @@
 
   &__description {
     text-align: center;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-break: break-all;
   }
 
   &__icon-wrapper {

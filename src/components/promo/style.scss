@@ -30,6 +30,7 @@
     font-weight: 700;
     text-transform: uppercase;
     max-width: 700px;
+    word-break: break-word;
 
     @include media-breakpoint-up(md) {
       font-size: var(--size-48);
