@@ -1,4 +1,5 @@
 @use '../../scss/abstract/_mixins' as *;
+@use '../../scss/abstract/_variables' as *;
 
 html {
   scroll-behavior: smooth;
@@ -44,11 +45,13 @@ ul {
 a {
   color: var(--color-standart-white);
   text-decoration: none;
+  transition: $transition-basic;
 
   &:hover,
   &:active {
     text-decoration: none;
     color: var(--color-light-blue);
+    transition: $transition-basic;
   }
 }
 

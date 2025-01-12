@@ -48,6 +48,7 @@
     font-size: var(--size-16);
     line-height: var(--size-20);
     color: var(--color-special-gray);
+    text-align: center;
 
     @include media-breakpoint-up(md) {
       font-size: var(--size-18);
